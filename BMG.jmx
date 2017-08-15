@@ -1,0 +1,1740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Plano de Teste" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="Variáveis Definidas Pelo Usuário" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Grupo de Usuários" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador de Iteração" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1499975567000</longProp>
+        <longProp name="ThreadGroup.end_time">1499975567000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árvore de Resultados" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Relatório de Sumário" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Temporizador Constante" enabled="true">
+          <stringProp name="ConstantTimer.delay">3000</stringProp>
+        </ConstantTimer>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Configuração dos dados CSV" enabled="true">
+          <stringProp name="filename">usuarios.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">usuario</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="Configuração dos dados CSV" enabled="true">
+          <stringProp name="filename">users.csv</stringProp>
+          <stringProp name="fileEncoding"></stringProp>
+          <stringProp name="variableNames">user,pass</stringProp>
+          <boolProp name="ignoreFirstLine">false</boolProp>
+          <stringProp name="delimiter">,</stringProp>
+          <boolProp name="quotedData">true</boolProp>
+          <boolProp name="recycle">true</boolProp>
+          <boolProp name="stopThread">false</boolProp>
+          <stringProp name="shareMode">shareMode.all</stringProp>
+        </CSVDataSet>
+        <hashTree/>
+        <RecordingController guiclass="RecordController" testclass="RecordingController" testname="Controlador de Gravação" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="156 /cervello_teste" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="157 /cervello_teste/" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">Detected a redirect from the previous sample</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="160 /cervello_teste/Scripts/jsAjax.js" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="vjs" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vjs</stringProp>
+                  <stringProp name="Argument.value">132017116</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/Scripts/jsAjax.js</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="159 /cervello_teste/Scripts/jsFunctions.js" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="vjs" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vjs</stringProp>
+                  <stringProp name="Argument.value">132017116</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/Scripts/jsFunctions.js</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="162 /cervello_teste/images/LogoEfeito.png" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/images/LogoEfeito.png</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/webp,image/apng,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="164 /Cervello_Teste-References/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/Cervello_Teste-References/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/Cervello_Teste-References/bootstrap-3.3.5/css/bootstrap.css?vjs=132017116</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="165 /cervello_teste/" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="__EVENTTARGET" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__EVENTTARGET</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__EVENTARGUMENT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__EVENTARGUMENT</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATE" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATE</stringProp>
+                  <stringProp name="Argument.value">8x8/TP7JZyxOXDw6X/iwGqX21o2AqaMuvJxSEqjYZPBVlSmIi1uF8Theg0WVux1NH7b/aUwCxcPcbYIUqOR5D6a1txxleYBy+MLeoiGXVZSUGuW5G6A3PpBcU1fzbZbwenDifr1vBl1eXrcFzXnmvnlZGpwjQeFFuTQ9dbqQ69KY6Vb8fkNzO35si+d072g+3dkJBKWzQlCG6TYNqbls5tOx3BIe8F1Vr+Zmu/xX33pGg+/jpe6ENBHQsIG8c9tPTxgL1/DbzEsdH+FHGPPf3M0e6fChYJjCxoulZR3hjKli7oZpZioT2FnKIZkkPIz1VhxwtLyY9CURWu2d0ubWdU5b0KYtvWUC0MmpMCSJd5XFyX/RLMcvlBuR/xmvsQzNcdgMlAnpI3ta2lPzYcqvOCX4zBaUWvSHpbR+rcqDudildGT764GTrtfkdyviwyvFY/mi3WN38EAqGYyDMxn4KQ9BEGHVyj7IVUN/aOYJ4yaEwlvxKcdKVg2Cgyb7ERfGnyn9ifd2+S/kQA/dk7UcM7f3BTJlkry8fyaZF7qMv7YwP5qjOeBIgGwIW/UoJ4YrLHvRD8aCIy0M/6EZQYqHZqPhaYVTGPHjNiCUq/X7gctHtpYZ4+Fdy4dZJJtUzwLYYLnV9N6VXgVPHH9N4UT+K0HM7whjoyf89CLyRN46keJI4PcixjyLZic4lFsf7SgBUnUeuUcYJ0XHQSZmtE3ZkOripYYd4vaHrk0I1cd7z+Bbz1T9MR43CKFiID44RIAAMSAGAviJpb7r0Wzn3Sfq/Eky3Ywk4tEwc/6PD8kezRGYRx7eRACAiTozj1oyQapwMJL99LVCJ2f7MJYtLLvb7B/30S44BaCVYvo5L6aGyStJyhliAOzfEl5XanttvIi/+FnWCvTBNH2rmauv2ELmZuUv60jV/+qDg5EsOXNJsXFstce5VOTwzGe+sAU/fzyT1liCXSaNghj3qJb5p0KPFdj7ftQKNyGR2CDsj+Z1dqlKAAIQa8S3oudwOw6p44cUESHDTQk81uJZwLuY6WoCNCOxXB6cO7gL2fLBcfatMhrhJNGBOVm3nG+oXz7S8ql8cOWiZ4eK4A3SPWJ0WmPVQDOnhKuzeRujsn0VC/XnZm/t5NQ+mSUIrOgJkyl5q63glQbc6gLatefUOUrdrpa6dwnBy+cnir5oDfMmoH4MOEzEMd90vY+O1Oj6exydB3uiVdTK11nDJcQZkx1oTsg/vjCsvtzxSiXxZYl3xoCFfeuy/QGZAwOn98cGrgWGpat0FdKU83r7DragDMuaingUC9o0qKnFB+Hz70wr00HiY1r0lapwIJbK/9+vJwETkR492E5bPyL66shvhCC2x5b5JsIfDLNs0YcX7Ds3gaGleIR8V0wZBFnpx6/LvMtvHMp9nWb4tncDq2TXSQhLnLtjunByLOIgoVr2I4M/Njq03CoOkSNPmjI6zGaYmNiqod9oTwkdK3VL+Anj9pbKIoEzws1fRR/SwrBksH8adnzpcotcXr0u+bVIeuln/5cXw+j0QZJCEmehRD7tL6zLGl0xgDung6uTI1HzhN2Fss0ddjeSuRjBG/JqccMRYFIUMBrYLrcz4VofkKQ/oT2Q486xoudxcEoMLVm5Ahqq+739MoVecUqc/JWRylnos6KZsVTDhRCzm8ezS5+vlRibxbK/Gbw+iapznyhCpKjjueI0HcM2hKgAqN1rbWBHL7MlB9CS1VcLw9uitwHQ1mK/KVs2LcVcvsw9Fg8dAeQgxCAsKAt3gGg9fCUI7e7q0z8DLEMPHt7omi55HuWSj4u7TJT7SbTm9q8BGnsNJx22tWAa0GVco5+7vYT1LYGhOmNR5n23iPk1zalxmlAdsI+temQ8fJlGXERcdilaOvHAu0Rxlswc4s/pzrup1Qe8Pz4YskOEhiOjPq2UsEQ6JW41CUsSFpfYf6XEKEBh+VDPqtlHrkUmwTqMFnDX//eoTURiGQrqhMJ8c62zRZw7Cg9CZrfar6hS1knUnmZDvLVLv354bTA7sb9nmzYa8ccq+6C1byzqS2tH2PJX2+Q9d7dqlA0dnkxe7npH5SfKTWjio1fck8WGLCfl3vhMK6LjFQGWoZ9Bl7JlHf6UvCb+dJCrwBPbybkZzEmzXmTzBDirClCWCzxYfsCdKVwnU+iNLKH4KYp5TQDq/ZmRNunTDnYDMvNLTXEEbJN/jE+2ttv/DCmkvfB1D3C+oHU20GNRT2n7+9keokJT+vEtElAlvFwoxihCwlLorH4Qjb7T7sIIfHp3yH7jU1JYJzTQ5xhkUgUSVeZky9kuKASVSZIgYFf2Qqf2l0x2+60eme6HjjoDcAsp1dZ/OH9PW8mma8mSn7y6OTy2</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATEGENERATOR" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATEGENERATOR</stringProp>
+                  <stringProp name="Argument.value">536A6154</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATEENCRYPTED" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATEENCRYPTED</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__EVENTVALIDATION" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">__EVENTVALIDATION</stringProp>
+                  <stringProp name="Argument.value">+Qe8o//Qeth68JiSU2aKTQyh2prG+FTwWrKVmA6JmJq5vIgHmKj8mvLEtXQWHuCXitC1aRYtG7cEA6lSEAowkszURMSOs3YkoA/DoXD1DtFfwoRbPUPanXos2qMKDBDoIgDmZ/vkjpOCh26hndcvLNgKFHWPXUcPajYlQAvLeT0W4Hs0nnVjAVuhMod823lAlitDlnCpAUcg2vZq+mSJZBk4+ZQuqvUTJXGeQyYXhqOu29xmJW8/Apwm/4FDtGOfStXLFoPTba4E7AoA2a8HvdnBoaD404vFKG3Fhnhx7XCHi31SsUAyezU7z3kg7mAVeF4UGQMnYjMJUDnNV1FvZhPAkS5iv90sKVLYlB+1RgGF1jLsgkBamqHxnHwHVreA</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtLogin" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtLogin</stringProp>
+                  <stringProp name="Argument.value">${user}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtSenha" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtSenha</stringProp>
+                  <stringProp name="Argument.value">${pass}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$btnLogar" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$btnLogar</stringProp>
+                  <stringProp name="Argument.value">Entrar</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtErro2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtErro2</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtLoginMomento" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtLoginMomento</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtInfop" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtInfop</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtADM" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtADM</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="txtFazIssoAi" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">txtFazIssoAi</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="info_s" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">info_s</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="166 /Cervello_Teste-References/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/Cervello_Teste-References/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/Cervello_Teste-References/bootstrap-3.3.5/css/bootstrap.css?vjs=132017116</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="167 /cervello_teste/" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="__VIEWSTATE" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATE</stringProp>
+                  <stringProp name="Argument.value">3eBkFz4ObYAWWavola2KK83aDhCqX8ybO99IykHQq6KD7TFUitu8KVnFwxE3NXyAJYu049N9snKMGhpIif7z/JtT96/mAe5rkPT2q41TDMm8+5cReUAV6yfJXZU2G4yQPaJv+oqK+ckkpDtT+wZ4k/OobaEqyXnr5+bgcCySEjKwQxuzOea8H6w/yCkGO+Sc5Iru0H9rUnchKCuCtgpSCHM33X/PJECZK6+aEFiOm4ftOHRsai7WtlpkO+CQ1G8x3/dmV/YXUyb/93cbPCxiRN/EdGtEI/PNrCtwaUXXdpCGm/DrDaYRtaut1t7Zg5h0v8OQ6HcJvDHdK0uqwI4PJjzzaDf1j4NW+S5m68RUPd8e3nIGsaqd/Y0ctfnEHaLnd/4pLJeT6MVAC9XAuxKjKInH5zqhV1mE4lTlGIFadl3P9NLAqniLZvXfOE6oiC0oLVztXl5hshWOjehOukFS442u/NNdDUyn9+x9X4tmTBIKkhtkqm0dNH9VTd+qov2bhTzF5IsAH44P7q1Cy3mikGDohI1FF3yKy074RM8ZZ7WrIflRDitUm/ApdsaKUrfyhTtDRnxWjMzcFzmCN+eMMKcKrEYUNetaI7fLMWVgzqj0+WVSB33CLLW2Aa32T8zPVre4WPpSR5JSuAYjlAnc9yLCq9JBCY9vn5+9w7sWvxnGBVBrcYhYud3mfx0qWUpayoepHGkK0iWLEpRIzq+0wNU0owgIRyeVfrkcqxwhzm3kf7ma8zF2c9/6yIAs/8wYgUzOewv6X19usKSAX152CKCqZRbHdJSdzDRzEv8XGd1d9ezRRLmW6zp6uJs4EeLyC/m97CHMgYkJIMNZMiQ6yl+gT2uLIApqjPqjbLyuIg8WR1D5DpcpEOoXnCpu4kXMbXKFjvpKBHOTV17ZWTUObo0+4e4759oDp+n2as3zZAXVBSbwdIrqzFXE4uEfQXvLsFiVdTrL47MUHIwmc1R/bFLKL8ZUTByB1boytH0+MNHm9dyIXgxdX5GBhhlNk3Cf+O0QbNg/AwAbp4SvZKHz65zjf79Eyv4xEKqJEPDG8+L+gsKr/Hy887lAbc0M3pba4oXKr/vt3kVKclpFUxeBKtluYy6qMLPSDYP21C9SrPG+0mMVXA+t4EZkwCqElyYFRnQ9e8SLOD67F7FTWNSK9CGeGmRLhi1eCzkh/9n1OwoWUsdJynyxPwxCtPOibOmhk3aUkXllhv9/ChDqSRr7IR1+sQxcWCdDr5oyd+reCaokjPZA5e3kZ+2fPQ6HPpRaYco548kcKWIFQq4rA2ygFC7H5RMKmD2YqQiroOuWqG/wuzmN3u6zxjYyu8CIGDp1yEPMg2BGhTNpwn+7kQovb6BNoUIIeF3y4B65gHvD2D6/kLubP9MYqJW00yRjM3OPvg6BL9ej/mXqx/B2VLSyEaOYf8jypg4kn8anCx1qw2CVLELLGzdeel7iQoyAYQCV1prNHtpqjyuY7+Zv08L6NtmHeu0gHMqNzbE9VPBmoa6yPwXauiy83c52bkBaDDvxaRqWDguI60Otab7Cu+AygvPgiCs2gfp0kkvhfSDzMuvwhrGsl2zVTOqDRateB+KtY3R3NbBkXC0pS8+jFFzaVpq5FiF7rjjn5Ta4DhDwTeaiSi826t0nhPOR8aqnOsz9OimQnu1YpB0iPX3RBI2+1blQbkjRlbi3xYUvgQaEl8J8ytnD4HF7+p5IwCBphX2TTiOXF1QYYF/fM+FaCS/699l7Z298/6f5WpT3Gd8CtJvHD9DUs5s+BcWUAVPQCCeLqGGgrrH80IxOEEI7bNB0CR7IpQJnygaL+Tx6eHK7vASi1ILrCyaeGdlXyB5ZSaMQjRZIt3n8CqBo+Arh/o3j2MY9W+otlZel/Tf+eybKt7A5yTxa3PHzK2sVzgw9BVPXO9BpVmsGKjs9lBhXq1FXHBP8waMADoCOf2V4ZezVb7u/xeUt02I249A17xTrxbqDigSKzHg75TYChET3EEyAhyaWYqVxONqGuRzQejcJ8dn5Lvs85MRpnibn/bcQtHNORt+vPVF9Xttz22B0A/WRRvPfrTmPlslg+2BfqfTyLsIlYGHxXh81Q+gJM2QZIeN0hPG1K2xCH7JyzH4y9thjId6U8IX90g9hgECM6XnqeJbxOlvcvcsDL28E2X1a5tfv34XasIsHlDQudtUeO0p20ERzLBdIHJJh/RjTDev6csa2a5Aq/Svwnk6qnAhgc7CMVWDLar1EOfhXXqu+A+vcX2liYOnm8w5YLl7qneD8ESYRaXt/pAtWSIH+k5t45pkIJhugErs6b7bEqTESlrR0Y3KoBXHW4cLeujQp1TLfrK1Wn4XYNHRZ8hUW7H6nvdOL6BG2kjLmuR6wEFDMz71JIKhcgzFNWYIHG4Ivly0a2uBDFpC7btDQY3sgDefSkI7emqj2gPNVZJH4nJa8zUOMBtDJ1KHZyQdQgI/lgS0uur4cAcT6s4JTDJwneCp4ernnoVaCNEy1nU6NV5JO4slZCs4r9IMNdux3HEyZDwfTR7fEp6F5HhhBwPEoAH26dkQ+eED4uZM9mcOIWXMVKNmRTg==</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATEGENERATOR" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATEGENERATOR</stringProp>
+                  <stringProp name="Argument.value">536A6154</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATEENCRYPTED" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATEENCRYPTED</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__EVENTVALIDATION" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">__EVENTVALIDATION</stringProp>
+                  <stringProp name="Argument.value">OBZt+21R6WIkxCgYVDovzP2GvPaTd7Sh/uMDbxwuLx4F/0zExSa+DFg/JR/Szb7i/SD9yxP7DPsU8qb65b+exn52lUSZLWZqq0DLmOirSVo7Hu2e+NL/wFbiLfdDKUv8R4bG7/+WG108sKFM4MlR62+hrhVhy+DKKf388jbKEKUoxRsxfB9ayIWwv9IL7AV6GIGqoP5y2mice4xUzeXDWt3rrcyXvP2CLqoycaTGHHNwZ6dPd/E5yj3K/KHcjrvShKc8T/sn7SoRBEiUDNbfhrUhAymU+kiSvk4h/0hLwu024u4JrunpubfEKOx+DkCHqtbsD2hxQ4F4ZV/nbdkBiw==</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtLoginADM" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtLoginADM</stringProp>
+                  <stringProp name="Argument.value">${user}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$btnLogarADM" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$btnLogarADM</stringProp>
+                  <stringProp name="Argument.value">Entrar</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtErro2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtErro2</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtLoginMomento" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtLoginMomento</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtInfop" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtInfop</stringProp>
+                  <stringProp name="Argument.value">NjtzkXyWhWQYdfxt+j5iLO3kBeyjYpGFbNK7FRu1LWwMA2K+LMQ1BXq/uKToSpe0WwZmVALASXgnEPlvhio8dhnlbTppoaPD4Rmc9DKKq/T55w8d92qgOkwcdFlGuqqnLNWLuorMNR0MUhKbocDoDtvZALScZiEkVdjjcOr18I/m+yGKqZbHKbgnNipMIjvcY55CtOUmUA8W6g2duuGwH3TYn2vAyPeyO6382tPQdONYGUE6MAV9TxcJ7Y/vxIOB4fxI4qTZClyuo7v53LG7LgsigEQDbkF8lo2Kk0W4zcSvRJ9wCe0A+xR6Fr6gHjp8m+jp7vRehWXxi84BIzTxtHq2YBk++/v//5+PbJuc9N/3yiAXJOcrwH9TFq8XvQB2Wo4bojIciVxYUw9sX+lzEmBap/yANvsG4pjNBfcelZiYAb5vheHFaXvT5mXOsysnKdi+fvWd5kh0M8eIMPXBx2fGY8wLJC2/orewBcR3BsCYihO9Re0qB2tO2bp21Ob/R0NSgvdYfg83Yfpke46d41WNq11VtHCOe0zL8PSY1/NzV1MK9ZlST3+lIaSkqXnCrjZ0P5BS/0lSMYvk/hdOmEn4S1/bBXBKU8PkrU4p4C9TcosA3gkRAvdz+s4GUtX8z4xO3Xjbee916L9Y1J7FwFykftgIhJQfM8yR6PX8gJ4YqqzNY3E9PfE7vjFr2RgxJfmxDHceFhbBMTz+8UwF/xiA0nFJoo2Wh1UR+/F7T/CEhyuVX81eP/ALrjFuEvvfYhNqp/8sHQ3g4xsqBf7127yUkwUfUbbwUOtFuhc+GEn8Ms7dLLG6fpov6cxKPmGym4G4kyeZV7EqM97XRuRIMW9p+OFmqj6bGtcfC4l7aw9MfOg+zcJqNHUeSHJKfvFPjVUfT08GbIqO+gYFiUZiLZZ16ZBXJiJEu2jikfT5tmzJP73r+UL2AKGMUyvdxWhagrMigmaQJZOIJHqmmeoXakjsLVFgCPA62b1kcaUsNYbZArwHWzQGKPjk7ky+Eu4V+FKNyFjzNxVqiirFxVyYOmp4wpWScPg8btDBxvaM6tlLh7J7CNDYHypNiEZiXCCcUaKFSgDS+nFRRNQPmdS1LQAYN/3woFg3Gl52s4wULqZI6hBMR3cHdFtQbeYJ0ZHKsErRfyTiEwxEi+wCe/yPaIiLDmxTGPEu6Ruy1G05fYP5VRDXpR9tCu2pG5bTXAHTcIHX/lvK/eDxDO6/Ulh7s5PYhGg6sTc2pWkWl0XexhAF0zklC3ZaHXmJErvsFNzzN/Q1waFJmDmKPZw2w0nVqUOB/Ec1sOphbpV9ANyXb8rJSNZCPZ6bCZOr9DARVZCSoUVkj1HKwCmlkorW/G6nT/IfAXSCPhzZ/Rl5seH7AEGfvAP0CmHNsunFxPEpRI9TsCGy6ZKcxQpd5UyewpT+HRr3XASYQQVg904AWp0YVGQFXaXrBZqZ/2YoYsbJiDo/04jFTpZPV0LqiQEQWPPFuXlafUweblaJ</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1$txtADM" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">UC_Login1$txtADM</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="txtFazIssoAi" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">txtFazIssoAi</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="info_s" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">info_s</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="168 /Cervello_Teste-References/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/Cervello_Teste-References/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/Cervello_Teste-References/bootstrap-3.3.5/css/bootstrap.css?vjs=132017116</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="169 /cervello_teste/cerMain.aspx" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="__EVENTTARGET" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__EVENTTARGET</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__EVENTARGUMENT" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__EVENTARGUMENT</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATE" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATE</stringProp>
+                  <stringProp name="Argument.value">j0Xjp8sIuqg5sM9Kv4tgANUWR7xN4zSq7PTUinQovSfhxcAmKGwGocIWzx7IRM8kS2Dy9Q1jQUc45IKlIs82hDV%2Ftfr3rs6z5a7%2FHrT0ZklQGWbxjSKUGV7bYRSvYO%2FxuVgEurnQdYPjP%2BBPiUeu%2BYybV8VO5OIXeX8o%2FA1LuoIGtVwmrOSLmq9PrN5AlqMlDhsRQuOSz%2FsGtZxnczNGcqVfW1QUskTRy9ZgUqUfFKT%2BLJ7tsPct5NkEEmwOU%2BYdEYKvolaApu0QLzIjefLDUcy7Tesi3hMG1atS%2FlHSVRbQy4IZ6gGWDaomvNhwLt%2Bhbv6ug0WyPaV6SJCa3503nxWMAa%2Bnl0ly1KhPNvMUuaEWbyHac1bqNKo%2BJ3LmLTxXL1zXIT5TiXAt1zMPd7YR0VMgo5JyylDxEUEGtiCnRvdW7hcO1RvmR03rrdSs7Jo4m0rqBAuX1Wb47w5iFamXSFiu9JvUyQnY8BKIxboewcz%2B%2BED%2BPFsXpYPpPm6J66chO2%2B38p8RH3aqB4u2TFTPJnUj58hkaJO%2BUE1%2Bg9Jx%2BLsCSYPSK%2FRouzOUQNQ0Fbsasq2XLTPGbAzM33lcxkIp%2F%2B78nN%2FefO2IUnazlPCqO9cZKNkSI2VDUOt0rchfXBQQMlw6Eerz7kVoIIayT33UliEz1c8kM5x6%2BYKFH%2FlMIF33c9iDDTG%2FN5ZyHSLr9ycNUUhQIOYkTTP6WrG2E0EYwDCwD3gZVRERBAbdfkeOEfEkLqNJMAsG%2BC2O9s4l5%2FCRCp%2Fn%2F4By3aAb%2FYd5y8KQTGIuJw2pl6yx868GbTc66dVqthz1zIAuuFVCg3efBdo2jmyjyIi5ZBChnUa9YYlChxaAB01QHBv2tX1WiElB4Wn4b4X2Rrh45ohTf0aXkhSH8nKFPe28c5FdRPdqihRJhn%2BrdFTw%2FQzF%2FBSwwYAUK%2BWs%2B3oxNiglCSi1mTxx%2BHvkc4kX5X4dMcVh5htee9vs%2BD3fHy69hc0ePIDoyOGlzhZBDat2soEHe%2Fs5xmoHRoo8pZNJ9%2FPQdc2jqVWeyqgpi24rWjIGJDO8jy7o%2BQUn2jhO2mOVoisFgGNuvXkqjbKqjBJneLSjxbF3JopKfZ6Rga0u4iuPaEUoooIxu9X77SSf8Jr8FqGWicYwNSbdMXU08LZoF6sptG6%2B0DnA50UWOIn9rqdhX4QJKSvA3tI%2FFWl7xbR6cITLdUPKX8arsEMo%2FKvIqWyznTt519k76TZWxdnUZfI4TyEIRU2y3kMJeDkjFaE%2FS4rDPYYK4dtEMlI3AuukdOPAS4xAlnYxvAlJqyDPN4nwdt8FGELiI6qnbIkWtxQoe28lg3CgqX%2FQJyzet5IUya8oAu3nCXUgbPyxSpDJb8kJTHz1Sdo6Z%2B5rTOhb0HhpblsitOgs0i5LPvSclnn26%2FxC3Gq9r2ybb82qKyVIbRSdqavKxoyD6yhxiTN1Wi%2BbU63LV25MmknJ8TxzqwXRRdm3mGl9nL4l7wMjYw%2FusJuOdWH1dlptxo6VLkJoICJVkejxkbFPQICVaW45fZikqDQ4ciVEE%2FuDFRazN8oKVUdiTgg%2BkObIFRgeJvz601fwaS9inKMCloJM4BtgBRmShKx93gfMJ4ZeyPYNv%2Fb52UFrx3xJ%2FFu05g9qTq%2Fybm9HIbeaMMYdkM4vkmNyXjvhlGdw9GtOWI%2BbXl9r6lxwMGqycHHbOV3VcfnI%2FsZjkAqJDWU3BMDAfdEWlwDxk%2BIGtOuDAWEvymtArqFuxdTIE%2BflTzcPRoX1pZLhs5qcjSCuZ02tVw4h9DThVkTPBsCIxJT3LAvw5%2FQJNtcDbhvYYoWbo2iKIdEPApbfNe1d0SGWVLYqtL0%2Fs9J2GDr0SSr6VPC%2FrjPDL1ETWWxAd23SfTNT7STUTxgmFHSvIGejMk0Sp9Dk%2F%2FG%2FiUf4i8nkPzfKf%2F5ZWlrnSN6XW8VjIeoppS8pdDMiVE0%2F46oN4LB9Kf7sl4r9MBISMoqouOi7WsL1Rpsgiiea%2F8jgLsA9Ns14H6Rophv5Y1BMuNOaLAnFhsmUOuYLbXwRhmJfMHqF87sA1BSYcA%2FCj94NLtqhMgENrtl6RoOJLy9Gfb%2FB9XwCSwfk6K%2Bmna5EGoLAghQDAuBTiPjbeQGzYSDFtuBdqdQI8YUZUoCr%2F3qV0UP546SS%2BgKGjX1vE3g0Urwm53%2FnKrBVb%2FHIanbFqt8GXX9eTQdA80kj%2BaiQetATO35lKcARef%2F0k43xtrONhK0SKeWSK1Oiob3UMX9%2Beu%2Bs6bdQGXpgBWOukW%2BkG5ozDPQWvO2OdG23UR1HZPD%2BWfegC5kWKxGp6U5jjNFBUrEd%2Bq2KAL4klG6y1EeMKLRwNBky5mTnosbPCNz8XJEuUAxEkf%2BgB5UUbqT6%2Fn2mygMqw9FNZeLToZHFPFapRh9p9GGRfWSpkheoH%2FGq3CgckRRKpsVLd%2F0KBieQ8CmgsrzcXodtuLQphki5EyS6Oqsql3S7I%2FUyc4topIYzS3JeTQiedf9z1z%2B4FVt7G%2FUipn%2FJR2B8qrfnB%2Fdzr4%2BmSQ0lHU%2BPglgN%2BMEsI20O%2BiUfBLESE4AHEtQgCDaSw1fMlx%2Fz%2FCXzzAgiO3H8vnWMCQUgF6XpBrANpBXOuKNEanaXAKvQSnsC</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATEGENERATOR" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATEGENERATOR</stringProp>
+                  <stringProp name="Argument.value">536A6154</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__VIEWSTATEENCRYPTED" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__VIEWSTATEENCRYPTED</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__PREVIOUSPAGE" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__PREVIOUSPAGE</stringProp>
+                  <stringProp name="Argument.value">h3bXDiKf8fQ4M1x097JLFtW-Z8qby6_ykfGPzkbqv5sELt2ePX_VsJNALtIIs5H7kc_j4SGy4R9uEhbooUuof3Sh4kLSTBU3v-kT8zqjFNEcY5LTIT-o4bJaQXqrh_740</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="__EVENTVALIDATION" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">__EVENTVALIDATION</stringProp>
+                  <stringProp name="Argument.value">jmpFUErnA%2FmSWZuCg1dwGSkfP4vnVnTXSYzczWTw%2Bcq633Q74h54I8Lcn330BfAGHwRhsJ1fyc7lUX4p4%2F38ZUX4k%2BwZCYkUGDc%2BHWu4GUMloNj8KaFzNb99ePF5W3zfUiQddLDAK67ELyB%2BD89DknsPG5zMfL49Vi3WTv%2BQny9sdbQ78UyLR35%2Fh5gsneXvMv1H81ojPLPmU2xCyCiQlUUMZZ5G4eoOESlHQK8o7JWrdLJ1DC9lMHl6ylCPQxko%2FLcK59KChqwMmfOPJt%2Fzkz713zWuJfxUkG7jryEAMXcxtbb9hebmYoI5tvM0jqStQ7DT6AIrJ0JFaBwZx5vN%2FA%3D%3D</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1%24txtLoginADM" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">UC_Login1%24txtLoginADM</stringProp>
+                  <stringProp name="Argument.value">cervello</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1%24txtErro2" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">UC_Login1%24txtErro2</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1%24txtLoginMomento" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">UC_Login1%24txtLoginMomento</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1%24txtInfop" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">UC_Login1%24txtInfop</stringProp>
+                  <stringProp name="Argument.value">NjtzkXyWhWQYdfxt%2Bj5iLO3kBeyjYpGFbNK7FRu1LWwMA2K%2BLMQ1BXq%2FuKToSpe0WwZmVALASXgnEPlvhio8dhnlbTppoaPD4Rmc9DKKq%2FT55w8d92qgOkwcdFlGuqqnLNWLuorMNR0MUhKbocDoDtvZALScZiEkVdjjcOr18I%2Fm%2ByGKqZbHKbgnNipMIjvcY55CtOUmUA8W6g2duuGwH3TYn2vAyPeyO6382tPQdONYGUE6MAV9TxcJ7Y%2FvxIOB4fxI4qTZClyuo7v53LG7LgsigEQDbkF8lo2Kk0W4zcSvRJ9wCe0A%2BxR6Fr6gHjp8m%2Bjp7vRehWXxi84BIzTxtHq2YBk%2B%2B%2Fv%2F%2F5%2BPbJuc9N%2F3yiAXJOcrwH9TFq8XvQB2Wo4bojIciVxYUw9sX%2BlzEmBap%2FyANvsG4pjNBfcelZiYAb5vheHFaXvT5mXOsysnKdi%2BfvWd5kh0M8eIMPXBx2fGY8wLJC2%2ForewBcR3BsCYihO9Re0qB2tO2bp21Ob%2FR0NSgvdYfg83Yfpke46d41WNq11VtHCOe0zL8PSY1%2FNzV1MK9ZlST3%2BlIaSkqXnCrjZ0P5BS%2F0lSMYvk%2FhdOmEn4S1%2FbBXBKU8PkrU4p4C9TcosA3gkRAvdz%2Bs4GUtX8z4xO3Xjbee916L9Y1J7FwFykftgIhJQfM8yR6PX8gJ4YqqzNY3E9PfE7vjFr2RgxJfmxDHceFhbBMTz%2B8UwF%2FxiA0nFJoo2Wh1UR%2B%2FF7T%2FCEhyuVX81eP%2FALrjFuEvvfYhNqp%2F8sHQ3g4xsqBf7127yUkwUfUbbwUOtFuhc%2BGEn8Ms7dLLG6fpov6cxKPmGym4G4kyeZV7EqM97XRuRIMW9p%2BOFmqj6bGtcfC4l7aw9MfOg%2BzcJqNHUeSHJKfvFPjVUfT08GbIqO%2BgYFiUZiLZZ16ZBXJiJEu2jikfT5tmzJP73r%2BUL2AKGMUyvdxWhagrMigmaQJZOIJHqmmeoXakjsLVFgCPA62b1kcaUsNYbZArwHWzQGKPjk7ky%2BEu4V%2BFKNyFjzNxVqiirFxVyYOmp4wpWScPg8btDBxvaM6tlLh7J7CNDYHypNiEZiXCCcUaKFSgDS%2BnFRRNQPmdS1LQAYN%2F3woFg3Gl52s4wULqZI6hBMR3cHdFtQbeYJ0ZHKsErRfyTiEwxEi%2BwCe%2FyPaIiLDmxTGPEu6Ruy1G05fYP5VRDXpR9tCu2pG5bTXAHTcIHX%2FlvK%2FeDxDO6%2FUlh7s5PYhGg6sTc2pWkWl0XexhAF0zklC3ZaHXmJErvsFNzzN%2FQ1waFJmDmKPZw2w0nVqUOB%2FEc1sOphbpV9ANyXb8rJSNZCPZ6bCZOr9DARVZCSoUVkj1HKwCmlkorW%2FG6nT%2FIfAXSCPhzZ%2FRl5seH7AEGfvAP0CmHNsunFxPEpRI9TsCGy6ZKcxQpd5UyewpT%2BHRr3XASYQQVg904AWp0YVGQFXaXrBZqZ%2F2YoYsbJiDo%2F04jFTpZPV0LqiQEQWPPFuXlafUweblaJ</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="UC_Login1%24txtADM" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">UC_Login1%24txtADM</stringProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="btnRedirect" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">btnRedirect</stringProp>
+                  <stringProp name="Argument.value">Button</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="txtFazIssoAi" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">txtFazIssoAi</stringProp>
+                  <stringProp name="Argument.value">NjtzkXyWhWQYdfxt%2Bj5iLO3kBeyjYpGFbNK7FRu1LWwMA2K%2BLMQ1BXq%2FuKToSpe0WwZmVALASXgnEPlvhio8dhnlbTppoaPD4Rmc9DKKq%2FT55w8d92qgOkwcdFlGuqqnLNWLuorMNR0MUhKbocDoDtvZALScZiEkVdjjcOr18I%2Fm%2ByGKqZbHKbgnNipMIjvcY55CtOUmUA8W6g2duuGwH3TYn2vAyPeyO6382tPQdONYGUE6MAV9TxcJ7Y%2FvxIOB4fxI4qTZClyuo7v53LG7LgsigEQDbkF8lo2Kk0W4zcSvRJ9wCe0A%2BxR6Fr6gHjp8m%2Bjp7vRehWXxi84BIzTxtHq2YBk%2B%2B%2Fv%2F%2F5%2BPbJuc9N%2F3yiAXJOcrwH9TFq8XvQB2Wo4bojIciVxYUw9sX%2BlzEmBap%2FyANvsG4pjNBfcelZiYAb5vheHFaXvT5mXOsysnKdi%2BfvWd5kh0M8eIMPXBx2fGY8wLJC2%2ForewBcR3BsCYihO9Re0qB2tO2bp21Ob%2FR0NSgvdYfg83Yfpke46d41WNq11VtHCOe0zL8PSY1%2FNzV1MK9ZlST3%2BlIaSkqXnCrjZ0P5BS%2F0lSMYvk%2FhdOmEn4S1%2FbBXBKU8PkrU4p4C9TcosA3gkRAvdz%2Bs4GUtX8z4xO3Xjbee916L9Y1J7FwFykftgIhJQfM8yR6PX8gJ4YqqzNY3E9PfE7vjFr2RgxJfmxDHceFhbBMTz%2B8UwF%2FxiA0nFJoo2Wh1UR%2B%2FF7T%2FCEhyuVX81eP%2FALrjFuEvvfYhNqp%2F8sHQ3g4xsqBf7127yUkwUfUbbwUOtFuhc%2BGEn8Ms7dLLG6fpov6cxKPmGym4G4kyeZV7EqM97XRuRIMW9p%2BOFmqj6bGtcfC4l7aw9MfOg%2BzcJqNHUeSHJKfvFPjVUfT08GbIqO%2BgYFiUZiLZZ16ZBXJiJEu2jikfT5tmzJP73r%2BUL2AKGMUyvdxWhagrMigmaQJZOIJHqmmeoXakjsLVFgCPA62b1kcaUsNYbZArwHWzQGKPjk7ky%2BEu4V%2BFKNyFjzNxVqiirFxVyYOmp4wpWScPg8btDBxvaM6tlLh7J7CNDYHypNiEZiXCCcUaKFSgDS%2BnFRRNQPmdS1LQAYN%2F3woFg3Gl52s4wULqZI6hBMR3cHdFtQbeYJ0ZHKsErRfyTiEwxEi%2BwCe%2FyPaIiLDmxTGPEu6Ruy1G05fYP5VRDXpR9tCu2pG5bTXAHTcIHX%2FlvK%2FeDxDO6%2FUlh7s5PYhGg6sTc2BKKzlY8kSDIbnjwm1HrTbAC9HKsfEpETiWFMs51UgQePUYB1c%2F%2BRnciYEiFjr1G9lyJCS5RRUD6uUTyUptKgkTZRMbe3hZyvp4Cbx18MSemogx0DiuHJ0RyicCXreaJgoYTWjdTAh4CkWblqZZhMGSs%2Bb3E58IXIh0F336wjmoOd2HJyk3bb8SaBgAsTxedRX7HHCdCc0psK45Y4M8PzOD0u%2F51tTwCkoilRSTz0FmSMGNayYoityUVTBQuQiZc1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="info_s" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">info_s</stringProp>
+                  <stringProp name="Argument.value">NjtzkXyWhWQYdfxt%2Bj5iLO3kBeyjYpGFbNK7FRu1LWwMA2K%2BLMQ1BXq%2FuKToSpe0WwZmVALASXgnEPlvhio8dhnlbTppoaPD4Rmc9DKKq%2FT55w8d92qgOkwcdFlGuqqnLNWLuorMNR0MUhKbocDoDtvZALScZiEkVdjjcOr18I%2Fm%2ByGKqZbHKbgnNipMIjvcY55CtOUmUA8W6g2duuGwH3TYn2vAyPeyO6382tPQdONYGUE6MAV9TxcJ7Y%2FvxIOB4fxI4qTZClyuo7v53LG7LgsigEQDbkF8lo2Kk0W4zcSvRJ9wCe0A%2BxR6Fr6gHjp8m%2Bjp7vRehWXxi84BIzTxtHq2YBk%2B%2B%2Fv%2F%2F5%2BPbJuc9N%2F3yiAXJOcrwH9TFq8XvQB2Wo4bojIciVxYUw9sX%2BlzEmBap%2FyANvsG4pjNBfcelZiYAb5vheHFaXvT5mXOsysnKdi%2BfvWd5kh0M8eIMPXBx2fGY8wLJC2%2ForewBcR3BsCYihO9Re0qB2tO2bp21Ob%2FR0NSgvdYfg83Yfpke46d41WNq11VtHCOe0zL8PSY1%2FNzV1MK9ZlST3%2BlIaSkqXnCrjZ0P5BS%2F0lSMYvk%2FhdOmEn4S1%2FbBXBKU8PkrU4p4C9TcosA3gkRAvdz%2Bs4GUtX8z4xO3Xjbee916L9Y1J7FwFykftgIhJQfM8yR6PX8gJ4YqqzNY3E9PfE7vjFr2RgxJfmxDHceFhbBMTz%2B8UwF%2FxiA0nFJoo2Wh1UR%2B%2FF7T%2FCEhyuVX81eP%2FALrjFuEvvfYhNqp%2F8sHQ3g4xsqBf7127yUkwUfUbbwUOtFuhc%2BGEn8Ms7dLLG6fpov6cxKPmGym4G4kyeZV7EqM97XRuRIMW9p%2BOFmqj6bGtcfC4l7aw9MfOg%2BzcJqNHUeSHJKfvFPjVUfT08GbIqO%2BgYFiUZiLZZ16ZBXJiJEu2jikfT5tmzJP73r%2BUL2AKGMUyvdxWhagrMigmaQJZOIJHqmmeoXakjsLVFgCPA62b1kcaUsNYbZArwHWzQGKPjk7ky%2BEu4V%2BFKNyFjzNxVqiirFxVyYOmp4wpWScPg8btDBxvaM6tlLh7J7CNDYHypNiEZiXCCcUaKFSgDS%2BnFRRNQPmdS1LQAYN%2F3woFg3Gl52s4wULqZI6hBMR3cHdFtQbeYJ0ZHKsErRfyTiEwxEi%2BwCe%2FyPaIiLDmxTGPEu6Ruy1G05fYP5VRDXpR9tCu2pG5bTXAHTcIHX%2FlvK%2FeDxDO6%2FUlh7s5PYhGg6sTc2BKKzlY8kSDIbnjwm1HrTbAC9HKsfEpETiWFMs51UgQePUYB1c%2F%2BRnciYEiFjr1G9lyJCS5RRUD6uUTyUptKgkTZRMbe3hZyvp4Cbx18MSemogx0DiuHJ0RyicCXreaJgoYTWjdTAh4CkWblqZZhMGSs%2Bb3E58IXIh0F336wjmoOd2HJyk3bb8SaBgAsTxedRX7HHCdCc0psK45Y4M8PzOD0u%2F51tTwCkoilRSTz0FmSMGNayYoityUVTBQuQiZc1</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/cerMain.aspx</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8</stringProp>
+                </elementProp>
+                <elementProp name="Upgrade-Insecure-Requests" elementType="Header">
+                  <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+                  <stringProp name="Header.value">1</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+                <elementProp name="Cache-Control" elementType="Header">
+                  <stringProp name="Header.name">Cache-Control</stringProp>
+                  <stringProp name="Header.value">max-age=0</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="171 /cervello_teste/images/LogoBanner.png" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/images/LogoBanner.png</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/webp,image/apng,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="170 /cervello_teste/Scripts/cerMain.js" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="vjs" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">vjs</stringProp>
+                  <stringProp name="Argument.value">132017116</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/Scripts/cerMain.js</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="172 /cervello_teste/images/userDefault_Trans.png" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/images/userDefault_Trans.png</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/webp,image/apng,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="173 /Cervello_Teste-References/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/Cervello_Teste-References/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/Cervello_Teste-References/bootstrap-3.3.5/css/bootstrap.css?vjs=132017116</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">*/*</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="177 /cervello_teste/images/ajax-loader.gif" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/images/ajax-loader.gif</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/webp,image/apng,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="174 /cervello_teste/Services/svCervello.svc/GetContadores" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;info_s&quot;:&quot;NjtzkXyWhWQYdfxt+j5iLO3kBeyjYpGFbNK7FRu1LWwMA2K+LMQ1BXq/uKToSpe0WwZmVALASXgnEPlvhio8dhnlbTppoaPD4Rmc9DKKq/T55w8d92qgOkwcdFlGuqqnLNWLuorMNR0MUhKbocDoDtvZALScZiEkVdjjcOr18I/m+yGKqZbHKbgnNipMIjvcY55CtOUmUA8W6g2duuGwH3TYn2vAyPeyO6382tPQdONYGUE6MAV9TxcJ7Y/vxIOB4fxI4qTZClyuo7v53LG7LgsigEQDbkF8lo2Kk0W4zcSvRJ9wCe0A+xR6Fr6gHjp8m+jp7vRehWXxi84BIzTxtHq2YBk++/v//5+PbJuc9N/3yiAXJOcrwH9TFq8XvQB2Wo4bojIciVxYUw9sX+lzEmBap/yANvsG4pjNBfcelZiYAb5vheHFaXvT5mXOsysnKdi+fvWd5kh0M8eIMPXBx2fGY8wLJC2/orewBcR3BsCYihO9Re0qB2tO2bp21Ob/R0NSgvdYfg83Yfpke46d41WNq11VtHCOe0zL8PSY1/NzV1MK9ZlST3+lIaSkqXnCrjZ0P5BS/0lSMYvk/hdOmEn4S1/bBXBKU8PkrU4p4C9TcosA3gkRAvdz+s4GUtX8z4xO3Xjbee916L9Y1J7FwFykftgIhJQfM8yR6PX8gJ4YqqzNY3E9PfE7vjFr2RgxJfmxDHceFhbBMTz+8UwF/xiA0nFJoo2Wh1UR+/F7T/CEhyuVX81eP/ALrjFuEvvfYhNqp/8sHQ3g4xsqBf7127yUkwUfUbbwUOtFuhc+GEn8Ms7dLLG6fpov6cxKPmGym4G4kyeZV7EqM97XRuRIMW9p+OFmqj6bGtcfC4l7aw9MfOg+zcJqNHUeSHJKfvFPjVUfT08GbIqO+gYFiUZiLZZ16ZBXJiJEu2jikfT5tmzJP73r+UL2AKGMUyvdxWhagrMigmaQJZOIJHqmmeoXakjsLVFgCPA62b1kcaUsNYbZArwHWzQGKPjk7ky+Eu4V+FKNyFjzNxVqiirFxVyYOmp4wpWScPg8btDBxvaM6tlLh7J7CNDYHypNiEZiXCCcUaKFSgDS+nFRRNQPmdS1LQAYN/3woFg3Gl52s4wULqZI6hBMR3cHdFtQbeYJ0ZHKsErRfyTiEwxEi+wCe/yPaIiLDmxTGPEu6Ruy1G05fYP5VRDXpR9tCu2pG5bTXAHTcIHX/lvK/eDxDO6/Ulh7s5PYhGg6sTc2BKKzlY8kSDIbnjwm1HrTbAC9HKsfEpETiWFMs51UgQePUYB1c/+RnciYEiFjr1G9lyJCS5RRUD6uUTyUptKgkTZRMbe3hZyvp4Cbx18MSemogx0DiuHJ0RyicCXreaJgoYTWjdTAh4CkWblqZZhMGSs+b3E58IXIh0F336wjmoOd2HJyk3bb8SaBgAsTxedRX7HHCdCc0psK45Y4M8PzOD0u/51tTwCkoilRSTz0FmSMGNayYoityUVTBQuQiZc1&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/Services/svCervello.svc/GetContadores</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="175 /cervello_teste/Services/svBaseConhecimento.svc/GetArtigosNoticia" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;info_s&quot;:&quot;NjtzkXyWhWQYdfxt+j5iLO3kBeyjYpGFbNK7FRu1LWwMA2K+LMQ1BXq/uKToSpe0WwZmVALASXgnEPlvhio8dhnlbTppoaPD4Rmc9DKKq/T55w8d92qgOkwcdFlGuqqnLNWLuorMNR0MUhKbocDoDtvZALScZiEkVdjjcOr18I/m+yGKqZbHKbgnNipMIjvcY55CtOUmUA8W6g2duuGwH3TYn2vAyPeyO6382tPQdONYGUE6MAV9TxcJ7Y/vxIOB4fxI4qTZClyuo7v53LG7LgsigEQDbkF8lo2Kk0W4zcSvRJ9wCe0A+xR6Fr6gHjp8m+jp7vRehWXxi84BIzTxtHq2YBk++/v//5+PbJuc9N/3yiAXJOcrwH9TFq8XvQB2Wo4bojIciVxYUw9sX+lzEmBap/yANvsG4pjNBfcelZiYAb5vheHFaXvT5mXOsysnKdi+fvWd5kh0M8eIMPXBx2fGY8wLJC2/orewBcR3BsCYihO9Re0qB2tO2bp21Ob/R0NSgvdYfg83Yfpke46d41WNq11VtHCOe0zL8PSY1/NzV1MK9ZlST3+lIaSkqXnCrjZ0P5BS/0lSMYvk/hdOmEn4S1/bBXBKU8PkrU4p4C9TcosA3gkRAvdz+s4GUtX8z4xO3Xjbee916L9Y1J7FwFykftgIhJQfM8yR6PX8gJ4YqqzNY3E9PfE7vjFr2RgxJfmxDHceFhbBMTz+8UwF/xiA0nFJoo2Wh1UR+/F7T/CEhyuVX81eP/ALrjFuEvvfYhNqp/8sHQ3g4xsqBf7127yUkwUfUbbwUOtFuhc+GEn8Ms7dLLG6fpov6cxKPmGym4G4kyeZV7EqM97XRuRIMW9p+OFmqj6bGtcfC4l7aw9MfOg+zcJqNHUeSHJKfvFPjVUfT08GbIqO+gYFiUZiLZZ16ZBXJiJEu2jikfT5tmzJP73r+UL2AKGMUyvdxWhagrMigmaQJZOIJHqmmeoXakjsLVFgCPA62b1kcaUsNYbZArwHWzQGKPjk7ky+Eu4V+FKNyFjzNxVqiirFxVyYOmp4wpWScPg8btDBxvaM6tlLh7J7CNDYHypNiEZiXCCcUaKFSgDS+nFRRNQPmdS1LQAYN/3woFg3Gl52s4wULqZI6hBMR3cHdFtQbeYJ0ZHKsErRfyTiEwxEi+wCe/yPaIiLDmxTGPEu6Ruy1G05fYP5VRDXpR9tCu2pG5bTXAHTcIHX/lvK/eDxDO6/Ulh7s5PYhGg6sTc2BKKzlY8kSDIbnjwm1HrTbAC9HKsfEpETiWFMs51UgQePUYB1c/+RnciYEiFjr1G9lyJCS5RRUD6uUTyUptKgkTZRMbe3hZyvp4Cbx18MSemogx0DiuHJ0RyicCXreaJgoYTWjdTAh4CkWblqZZhMGSs+b3E58IXIh0F336wjmoOd2HJyk3bb8SaBgAsTxedRX7HHCdCc0psK45Y4M8PzOD0u/51tTwCkoilRSTz0FmSMGNayYoityUVTBQuQiZc1&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/Services/svBaseConhecimento.svc/GetArtigosNoticia</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="179 /cervello_teste/getImage.aspx" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="thumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">thumb</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="img" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">img</stringProp>
+                  <stringProp name="Argument.value">V1RnMhSk5ZCgV8wA8suMa%2fcFH3cqYFnhTAZlkbVvrdFUxDHkNn47ouyAWoYUzg3R</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/getImage.aspx</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/webp,image/apng,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="181 /Cervello_Teste/PageError.aspx" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="erro" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">erro</stringProp>
+                  <stringProp name="Argument.value">dQo3jSi2H1w%3d</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/Cervello_Teste/PageError.aspx</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/webp,image/apng,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="176 /cervello_teste/Services/svCervello.svc/GetMinhaLicenca" enabled="true">
+            <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">{&quot;info_s&quot;:&quot;NjtzkXyWhWQYdfxt%2Bj5iLO3kBeyjYpGFbNK7FRu1LWwMA2K%2BLMQ1BXq%2FuKToSpe0WwZmVALASXgnEPlvhio8dhnlbTppoaPD4Rmc9DKKq%2FT55w8d92qgOkwcdFlGuqqnLNWLuorMNR0MUhKbocDoDtvZALScZiEkVdjjcOr18I%2Fm%2ByGKqZbHKbgnNipMIjvcY55CtOUmUA8W6g2duuGwH3TYn2vAyPeyO6382tPQdONYGUE6MAV9TxcJ7Y%2FvxIOB4fxI4qTZClyuo7v53LG7LgsigEQDbkF8lo2Kk0W4zcSvRJ9wCe0A%2BxR6Fr6gHjp8m%2Bjp7vRehWXxi84BIzTxtHq2YBk%2B%2B%2Fv%2F%2F5%2BPbJuc9N%2F3yiAXJOcrwH9TFq8XvQB2Wo4bojIciVxYUw9sX%2BlzEmBap%2FyANvsG4pjNBfcelZiYAb5vheHFaXvT5mXOsysnKdi%2BfvWd5kh0M8eIMPXBx2fGY8wLJC2%2ForewBcR3BsCYihO9Re0qB2tO2bp21Ob%2FR0NSgvdYfg83Yfpke46d41WNq11VtHCOe0zL8PSY1%2FNzV1MK9ZlST3%2BlIaSkqXnCrjZ0P5BS%2F0lSMYvk%2FhdOmEn4S1%2FbBXBKU8PkrU4p4C9TcosA3gkRAvdz%2Bs4GUtX8z4xO3Xjbee916L9Y1J7FwFykftgIhJQfM8yR6PX8gJ4YqqzNY3E9PfE7vjFr2RgxJfmxDHceFhbBMTz%2B8UwF%2FxiA0nFJoo2Wh1UR%2B%2FF7T%2FCEhyuVX81eP%2FALrjFuEvvfYhNqp%2F8sHQ3g4xsqBf7127yUkwUfUbbwUOtFuhc%2BGEn8Ms7dLLG6fpov6cxKPmGym4G4kyeZV7EqM97XRuRIMW9p%2BOFmqj6bGtcfC4l7aw9MfOg%2BzcJqNHUeSHJKfvFPjVUfT08GbIqO%2BgYFiUZiLZZ16ZBXJiJEu2jikfT5tmzJP73r%2BUL2AKGMUyvdxWhagrMigmaQJZOIJHqmmeoXakjsLVFgCPA62b1kcaUsNYbZArwHWzQGKPjk7ky%2BEu4V%2BFKNyFjzNxVqiirFxVyYOmp4wpWScPg8btDBxvaM6tlLh7J7CNDYHypNiEZiXCCcUaKFSgDS%2BnFRRNQPmdS1LQAYN%2F3woFg3Gl52s4wULqZI6hBMR3cHdFtQbeYJ0ZHKsErRfyTiEwxEi%2BwCe%2FyPaIiLDmxTGPEu6Ruy1G05fYP5VRDXpR9tCu2pG5bTXAHTcIHX%2FlvK%2FeDxDO6%2FUlh7s5PYhGg6sTc2BKKzlY8kSDIbnjwm1HrTbAC9HKsfEpETiWFMs51UgQePUYB1c%2F%2BRnciYEiFjr1G9lyJCS5RRUD6uUTyUptKgkTZRMbe3hZyvp4Cbx18MSemogx0DiuHJ0RyicCXreaJgoYTWjdTAh4CkWblqZZhMGSs%2Bb3E58IXIh0F336wjmoOd2HJyk3bb8SaBgAsTxedRX7HHCdCc0psK45Y4M8PzOD0u%2F51tTwCkoilRSTz0FmSMGNayYoityUVTBQuQiZc1&quot;}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/Services/svCervello.svc/GetMinhaLicenca</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Origin" elementType="Header">
+                  <stringProp name="Header.name">Origin</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19</stringProp>
+                </elementProp>
+                <elementProp name="X-Requested-With" elementType="Header">
+                  <stringProp name="Header.name">X-Requested-With</stringProp>
+                  <stringProp name="Header.value">XMLHttpRequest</stringProp>
+                </elementProp>
+                <elementProp name="Content-Type" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/json</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">application/json, text/javascript, */*; q=0.01</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="180 /cervello_teste/getImage.aspx" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="thumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">thumb</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+                <elementProp name="img" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">img</stringProp>
+                  <stringProp name="Argument.value">%2bAkUMtT%2flLT5pYWux%2fTI7LsLzPFe8hUlrMOI7zDYhHIceJLOkAhfbUA73poAsU0J</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/getImage.aspx</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/webp,image/apng,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="182 /Cervello_Teste/PageError.aspx" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="erro" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                  <stringProp name="Argument.name">erro</stringProp>
+                  <stringProp name="Argument.value">dQo3jSi2H1w=</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding">utf-8</stringProp>
+            <stringProp name="HTTPSampler.path">/Cervello_Teste/PageError.aspx</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/webp,image/apng,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="178 /cervello_teste/getImage.aspx" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="thumb" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">thumb</stringProp>
+                  <stringProp name="Argument.value">0</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+                <elementProp name="img" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.name">img</stringProp>
+                  <stringProp name="Argument.value">So4H9eMQtLWurepGM6JLR0TnJRh6sptEg19wvQNcNRHO1GX1uUsCcSuODZNcvgTM</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain">186.237.202.19</stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol">http</stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/cervello_teste/getImage.aspx</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="TestPlan.comments">Detected the start of a redirect chain</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="Referer" elementType="Header">
+                  <stringProp name="Header.name">Referer</stringProp>
+                  <stringProp name="Header.value">http://186.237.202.19/cervello_teste/cerMain.aspx</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Language" elementType="Header">
+                  <stringProp name="Header.name">Accept-Language</stringProp>
+                  <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.6,en;q=0.4</stringProp>
+                </elementProp>
+                <elementProp name="Accept-Encoding" elementType="Header">
+                  <stringProp name="Header.name">Accept-Encoding</stringProp>
+                  <stringProp name="Header.value">gzip, deflate</stringProp>
+                </elementProp>
+                <elementProp name="User-Agent" elementType="Header">
+                  <stringProp name="Header.name">User-Agent</stringProp>
+                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36</stringProp>
+                </elementProp>
+                <elementProp name="Accept" elementType="Header">
+                  <stringProp name="Header.name">Accept</stringProp>
+                  <stringProp name="Header.value">image/webp,image/apng,image/*,*/*;q=0.8</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="Área de Trabalho" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree>
+      <ProxyControl guiclass="ProxyControlGui" testclass="ProxyControl" testname="Servidor HTTP Proxy" enabled="true">
+        <stringProp name="ProxyControlGui.port">9191</stringProp>
+        <collectionProp name="ProxyControlGui.exclude_list"/>
+        <collectionProp name="ProxyControlGui.include_list"/>
+        <boolProp name="ProxyControlGui.capture_http_headers">true</boolProp>
+        <intProp name="ProxyControlGui.grouping_mode">0</intProp>
+        <boolProp name="ProxyControlGui.add_assertion">false</boolProp>
+        <stringProp name="ProxyControlGui.sampler_type_name"></stringProp>
+        <boolProp name="ProxyControlGui.sampler_redirect_automatically">false</boolProp>
+        <boolProp name="ProxyControlGui.sampler_follow_redirects">true</boolProp>
+        <boolProp name="ProxyControlGui.use_keepalive">true</boolProp>
+        <boolProp name="ProxyControlGui.sampler_download_images">false</boolProp>
+        <stringProp name="ProxyControlGui.proxy_prefix_http_sampler_name"></stringProp>
+        <boolProp name="ProxyControlGui.notify_child_sl_filtered">true</boolProp>
+        <boolProp name="ProxyControlGui.regex_match">false</boolProp>
+        <stringProp name="ProxyControlGui.content_type_include"></stringProp>
+        <stringProp name="ProxyControlGui.content_type_exclude"></stringProp>
+      </ProxyControl>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

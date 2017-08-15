@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="3.2" jmeter="3.2 r1790748">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Plano de Teste" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="Variáveis Definidas Pelo Usuário" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Grupo de Usuários" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Controlador de Iteração" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1499279530000</longProp>
+        <longProp name="ThreadGroup.end_time">1499279530000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="Gerenciador de Cabeçalhos HTTP" enabled="true">
+          <collectionProp name="HeaderManager.headers">
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">User-Agent</stringProp>
+              <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.3; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Language</stringProp>
+              <stringProp name="Header.value">pt-BR,pt;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Encoding</stringProp>
+              <stringProp name="Header.value">gzip, deflate</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Accept-Encoding: gzip, deflate Content-Type</stringProp>
+              <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Length</stringProp>
+              <stringProp name="Header.value">3262</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Referer</stringProp>
+              <stringProp name="Header.value">http://www.suportecervello.com.br/Cervello/</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Connection</stringProp>
+              <stringProp name="Header.value">keep-alive</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Upgrade-Insecure-Requests</stringProp>
+              <stringProp name="Header.value">1</stringProp>
+            </elementProp>
+          </collectionProp>
+        </HeaderManager>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Requisição HTTP" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="__EVENTTARGET&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">__EVENTTARGET	</stringProp>
+              </elementProp>
+              <elementProp name="__EVENTARGUMENT&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">__EVENTARGUMENT	</stringProp>
+              </elementProp>
+              <elementProp name="__VIEWSTATE&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">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</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">__VIEWSTATE	</stringProp>
+              </elementProp>
+              <elementProp name="__VIEWSTATEGENERATOR&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">87528D8A</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">__VIEWSTATEGENERATOR	</stringProp>
+              </elementProp>
+              <elementProp name="__VIEWSTATEENCRYPTED&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">__VIEWSTATEENCRYPTED	</stringProp>
+              </elementProp>
+              <elementProp name="__EVENTVALIDATION&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">__EVENTVALIDATION	</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">__EVENTVALIDATION	</stringProp>
+              </elementProp>
+              <elementProp name="UC_Login1$txtLoginADM" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">renan.elias</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">UC_Login1$txtLoginADM</stringProp>
+              </elementProp>
+              <elementProp name="txtFazIssoAi" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">NjtzkXyWhWQYdfxt+j5iLO3kBeyjYpGFbNK7FRu1LWwMA2K+LMQ1BXq/uKToSpe0WwZmVALASXg/KyLSa7K9Bx+wgMcHwyTy0vmOQB4hKhxqwQZiwmQMw2BlQ22+BAoPzD5rfCElREdFo1dp+u0t29r5/wXomLRMrFp331BiM3rjMI1LMQ+qRpzvO1nZodckccV40bJvJ/siB4lR1VwdBapoqLynChVwQqUF49SfPdnSO0PdjAyplTrrQB+5i2Mu+Lo+6b7sdWFq3sMydOdkiK+ImVKXPNAjRqa3dMIJwcC1Hg+7KpI66JE1+7cqQgU4dyYDvc2nsgFC0gocSUN/QljSwvahWFzd/5GG77raqmyvN/SOtnB106s7ZyHWephK/aIsB70LPSrrPHQkx/gbQRqVQiYW9jDSf9oTuufMe9r/Gf/CRPOqazwM1nGJGNeotm7ngxRsUvEtuJGNnRdW2d7tkG9+rtcX6J2h3Rq2uuEKg1/hqzX2xpGw+AVRNM2i03ozQkjwQKtHIB+aaG1vJvYgwR5cNJUx5SPUzwc61QVQsYJU0FsG1vjXm8V/TaDDY9BkbiQQr1VvK+1eNWtOVbwaAzHr0MdW/laqnpJLvYdPQSKtBEwrrlcL/bV+RptbAjXerLR2UD7bV5SmfJfew9V7iWyIRIWa/utbJozgarGUvpHt9Y2/+bETnzpKJmvyBx3ldOkBwZLBCl1ODxp4UwN1MJAyXEmKAtTebCURGGwNZtuzJoh7MDlxG12oCrya9MS9yqMFHqOWXyr4Q1AtCVDXs4d3CQjY4SuxuZmhl3sQP/RxRQ5wLAxWpdl1qfyOVK/EQDguaIPKa7Y8FV/FvtjYApPWx0bWU2J6pL8sY0f4R0nXCxISeqA1Q/I0u97KHzdTcFtd2mGr6Ob5xwhsrtynXkMeLCnWbDSw+n219QEVVgbdB9BZkxyxOeNGATRuxqzn4xVQeQzubGt5Y+HUaYpJS3N4zrau1mRULfRz/qOqpxzTJjc5XM6tm4oFSW4fxa72GWlk75C4g2wFPC0+lFEFgl4ZKbiKuXhUJi973TdFx3VUEnwBWa2JnTKWYa724RFoCc5sZbMoP93MVjbEb8e+BNHY6IheaCmpQpOi/r3SmvWjw3GxOUSSxEcyJzGPfoQpmLs1hTemtCoWJzHVWa9ITOri9FC+0HgdPZ1nN4OxwiRENA0PcO+5aoT+2QhGL1bcndxmnIM/qO6iYYeuIXvBWfHZtzfJgbgZ8fPfcJmUJyVXvL7abjqkyE0GmR7y745lb2GjX+j4SHjsUoStknn5vgQpF8eqc/OfeWUiPEJTCyg6/vDLcpIr6f/53T5IyIXk4u9LzYjb+s5OnQTbSUDB8ZxAUOx71DrYVxnhKesgvsE61Y1ieQ0SVFoPwAgQy4fYn8jv+yNJPi2CLncBYCyi2YDv5BetBQ5z7MoTdmbTkZZQZBynkm+XIpkstHxCWDEhjdCsUAjx13pgpfx6CGXbePx/npk1LuCA4sRB0sg=</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">txtFazIssoAi</stringProp>
+              </elementProp>
+              <elementProp name="UC_Login1$btnLogar" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">Entrar</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">UC_Login1$btnLogar</stringProp>
+              </elementProp>
+              <elementProp name="__PREVIOUSPAGE&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">1a-cw60DLPQqsUUQ3CiXEQnbX5Y3WEaRerYeNMHfwWxzrsbBf6siHvDSw_Kz0UQJ1c-O-VYsBWmQNtHpt-s23Oxv8z1woqytopNYaJTAnKw1</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">__PREVIOUSPAGE	</stringProp>
+              </elementProp>
+              <elementProp name="__EVENTVALIDATION" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">U0wrEF15g1OnEAlg1sAH06jrz8Mv1NqV9kFxID/u3RdOMrmCH0WhnxCPDJjtS/jVvInMjDeY6LtER4KGgbbP6YuUscvKStUEJ5WgQR0UGmELhsyADw/ODvP6spP4iKG+UTOa+/FKtvfaMofvgx9AggayBTmtlDgWs4755dr0zd7PWSrdjJ3/wyUahscoZnPdjnrYCbMKK15fl8GCM4EHArufKcyhN+sNN2u603o4ED9J3UnD21xN86lf/EuY7z0BhwYEpWQmUpecR2Gr9Nyspdq5NpDJLSmqH4u734eueBh2+GwfZ304q3WKzZwPfxY1DcAqlMilEuY+pF6gBta/+w==</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">__EVENTVALIDATION</stringProp>
+              </elementProp>
+              <elementProp name="UC_Login1$txtErro2" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">UC_Login1$txtErro2</stringProp>
+              </elementProp>
+              <elementProp name="UC_Login1$txtLoginMomento&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value"></stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">UC_Login1$txtLoginMomento	</stringProp>
+              </elementProp>
+              <elementProp name="UC_Login1$txtInfop&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">NjtzkXyWhWQYdfxt+j5iLO3kBeyjYpGFbNK7FRu1LWwMA2K+LMQ1BXq/uKToSpe0WwZmVALASXg/KyLSa7K9Bx+wgMcHwyTy0vmOQB4hKhxqwQZiwmQMw2BlQ22+BAoPzD5rfCElREdFo1dp+u0t29r5/wXomLRMrFp331BiM3rjMI1LMQ+qRpzvO1nZodckccV40bJvJ/siB4lR1VwdBapoqLynChVwQqUF49SfPdnSO0PdjAyplTrrQB+5i2Mu+Lo+6b7sdWFq3sMydOdkiK+ImVKXPNAjRqa3dMIJwcC1Hg+7KpI66JE1+7cqQgU4dyYDvc2nsgFC0gocSUN/QljSwvahWFzd/5GG77raqmyvN/SOtnB106s7ZyHWephK/aIsB70LPSrrPHQkx/gbQRqVQiYW9jDSf9oTuufMe9r/Gf/CRPOqazwM1nGJGNeotm7ngxRsUvEtuJGNnRdW2d7tkG9+rtcX6J2h3Rq2uuEKg1/hqzX2xpGw+AVRNM2i03ozQkjwQKtHIB+aaG1vJvYgwR5cNJUx5SPUzwc61QVQsYJU0FsG1vjXm8V/TaDDY9BkbiQQr1VvK+1eNWtOVbwaAzHr0MdW/laqnpJLvYdPQSKtBEwrrlcL/bV+RptbAjXerLR2UD7bV5SmfJfew9V7iWyIRIWa/utbJozgarGUvpHt9Y2/+bETnzpKJmvyBx3ldOkBwZLBCl1ODxp4UwN1MJAyXEmKAtTebCURGGwNZtuzJoh7MDlxG12oCrya9MS9yqMFHqOWXyr4Q1AtCVDXs4d3CQjY4SuxuZmhl3sQP/RxRQ5wLAxWpdl1qfyOVK/EQDguaIPKa7Y8FV/FvtjYApPWx0bWU2J6pL8sY0f4R0nXCxISeqA1Q/I0u97KHzdTcFtd2mGr6Ob5xwhsrtynXkMeLCnWbDSw+n219QEVVgbdB9BZkxyxOeNGATRuxqzn4xVQeQzubGt5Y+HUaYpJS3N4zrau1mRULfRz/qOqpxzTJjc5XM6tm4oFSW4fxa72GWlk75C4g2wFPC0+lFEFgl4ZKbiKuXhUJi973TdFx3VUEnwBWa2JnTKWYa724RFoCc5sZbMoP93MVjbEb8e+BNHY6IheaCmpQpOi/r3SmvWjw3GxOUSSxEcyJzGPfoQpmLs1hTemtCoWJzHVWa9ITOri9FC+0HgdPZ1nN4OxwiRENA0PcO+5aoT+2QhGL1bcndxmnIM/qO6iYYeuIXvBWfHZtzfJgbgZ8fPfcJmuRzbDemXjBJ0K+gPsFH+OOueffO0MNJvlRiwe7y7TvS819R8HKVom0ZXEAefugjicKwbpHnvxm8Om5ad0iFV61mD4THQ14excUxaBoOCfrsa1hgX36O7oB7iUSuFIC/Fjm+46PxnQjuZ6JzIZJyEly62rZfE/PPosH34LK9dWz/LCjKT8RoDr+2vqA1oLirqLIavZZXvur00YRb/R8ZyCD0yGzxIE7Qd8qBQB6alB2NWQ0sgp+O+5xTZ880/XKug=</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">UC_Login1$txtInfop	</stringProp>
+              </elementProp>
+              <elementProp name="info_s&#x9;" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                <stringProp name="Argument.value">NjtzkXyWhWQYdfxt+j5iLO3kBeyjYpGFbNK7FRu1LWwMA2K+LMQ1BXq/uKToSpe0WwZmVALASXg/KyLSa7K9Bx+wgMcHwyTy0vmOQB4hKhxqwQZiwmQMw2BlQ22+BAoPzD5rfCElREdFo1dp+u0t29r5/wXomLRMrFp331BiM3rjMI1LMQ+qRpzvO1nZodckccV40bJvJ/siB4lR1VwdBapoqLynChVwQqUF49SfPdnSO0PdjAyplTrrQB+5i2Mu+Lo+6b7sdWFq3sMydOdkiK+ImVKXPNAjRqa3dMIJwcC1Hg+7KpI66JE1+7cqQgU4dyYDvc2nsgFC0gocSUN/QljSwvahWFzd/5GG77raqmyvN/SOtnB106s7ZyHWephK/aIsB70LPSrrPHQkx/gbQRqVQiYW9jDSf9oTuufMe9r/Gf/CRPOqazwM1nGJGNeotm7ngxRsUvEtuJGNnRdW2d7tkG9+rtcX6J2h3Rq2uuEKg1/hqzX2xpGw+AVRNM2i03ozQkjwQKtHIB+aaG1vJvYgwR5cNJUx5SPUzwc61QVQsYJU0FsG1vjXm8V/TaDDY9BkbiQQr1VvK+1eNWtOVbwaAzHr0MdW/laqnpJLvYdPQSKtBEwrrlcL/bV+RptbAjXerLR2UD7bV5SmfJfew9V7iWyIRIWa/utbJozgarGUvpHt9Y2/+bETnzpKJmvyBx3ldOkBwZLBCl1ODxp4UwN1MJAyXEmKAtTebCURGGwNZtuzJoh7MDlxG12oCrya9MS9yqMFHqOWXyr4Q1AtCVDXs4d3CQjY4SuxuZmhl3sQP/RxRQ5wLAxWpdl1qfyOVK/EQDguaIPKa7Y8FV/FvtjYApPWx0bWU2J6pL8sY0f4R0nXCxISeqA1Q/I0u97KHzdTcFtd2mGr6Ob5xwhsrtynXkMeLCnWbDSw+n219QEVVgbdB9BZkxyxOeNGATRuxqzn4xVQeQzubGt5Y+HUaYpJS3N4zrau1mRULfRz/qOqpxzTJjc5XM6tm4oFSW4fxa72GWlk75C4g2wFPC0+lFEFgl4ZKbiKuXhUJi973TdFx3VUEnwBWa2JnTKWYa724RFoCc5sZbMoP93MVjbEb8e+BNHY6IheaCmpQpOi/r3SmvWjw3GxOUSSxEcyJzGPfoQpmLs1hTemtCoWJzHVWa9ITOri9FC+0HgdPZ1nN4OxwiRENA0PcO+5aoT+2QhGL1bcndxmnIM/qO6iYYeuIXvBWfHZtzfJgbgZ8fPfcJmUJyVXvL7abjqkyE0GmR7y745lb2GjX+j4SHjsUoStknn5vgQpF8eqc/OfeWUiPEJTCyg6/vDLcpIr6f/53T5IyIXk4u9LzYjb+s5OnQTbSUDB8ZxAUOx71DrYVxnhKesgvsE61Y1ieQ0SVFoPwAgQy4fYn8jv+yNJPi2CLncBYCyi2YDv5BetBQ5z7MoTdmbTkZZQZBynkm+XIpkstHxCWDEhjdCsUAjx13pgpfx6CGXbePx/npk1LuCA4sRB0sg=</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+                <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                <stringProp name="Argument.name">info_s	</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">www.suportecervello.com.br/</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol">http</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">cervello_homolog/cerMain.aspx</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árvore de Resultados" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="Área de Trabalho" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
